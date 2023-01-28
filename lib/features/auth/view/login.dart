@@ -24,14 +24,25 @@ class _LoginViewState extends State<LoginView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: appbar,
-      body: SingleChildScrollView(
-          padding: EdgeInsets.symmetric(horizontal: 30),
-          child: Column(
-            children: [
-              AuthField(controller: emailController),
-              AuthField(controller: passwordController)
-            ],
-          )),
+      body: Center(
+        child: SingleChildScrollView(
+            padding: const EdgeInsets.symmetric(horizontal: 30),
+            child: Column(
+              children: [
+                AuthField(
+                  controller: emailController,
+                  hinText: 'Email',
+                ),
+                const SizedBox(
+                  height: 25,
+                ),
+                AuthField(
+                  controller: passwordController,
+                  hinText: 'Password',
+                )
+              ],
+            )),
+      ),
     );
   }
 }
