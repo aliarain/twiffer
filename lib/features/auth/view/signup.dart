@@ -7,6 +7,7 @@ import 'package:twiffer/features/auth/widgets/auth_fields.dart';
 import 'package:twiffer/theme/pallete.dart';
 
 class SignUpView extends StatefulWidget {
+  static route() => MaterialPageRoute(builder: (context) => const SignUpView());
   const SignUpView({super.key});
 
   @override
@@ -61,10 +62,7 @@ class _SignUpViewState extends State<SignUpView> {
                             TextStyle(color: Pallete.blueColor, fontSize: 16),
                         recognizer: TapGestureRecognizer()
                           ..onTap = () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => LoginView()));
+                            Navigator.push(context, LoginView.route());
                           })
                   ],
                 ),
