@@ -2,6 +2,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:twiffer/common/button_small.dart';
 import 'package:twiffer/constants/ui_const.dart';
+import 'package:twiffer/features/auth/view/login.dart';
 import 'package:twiffer/features/auth/widgets/auth_fields.dart';
 import 'package:twiffer/theme/pallete.dart';
 
@@ -58,7 +59,13 @@ class _SignUpViewState extends State<SignUpView> {
                         text: ' Login',
                         style:
                             TextStyle(color: Pallete.blueColor, fontSize: 16),
-                        recognizer: TapGestureRecognizer()..onTap = () {})
+                        recognizer: TapGestureRecognizer()
+                          ..onTap = () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => LoginView()));
+                          })
                   ],
                 ),
               ),
