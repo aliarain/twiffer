@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:twiffer/features/auth/view/login.dart';
+import 'package:twiffer/features/auth/view/signup.dart';
 import 'package:twiffer/theme/theme.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const ProviderScope(child: const MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -13,6 +15,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'Flutter Demo', theme: AppTheme.theme, home: const LoginView());
+        title: 'Flutter Demo', theme: AppTheme.theme, home: const SignUpView());
   }
 }
