@@ -5,14 +5,14 @@ import 'package:twiffer/constants/ui_const.dart';
 import 'package:twiffer/features/auth/widgets/auth_fields.dart';
 import 'package:twiffer/theme/pallete.dart';
 
-class LoginView extends StatefulWidget {
-  const LoginView({super.key});
+class SignUpView extends StatefulWidget {
+  const SignUpView({super.key});
 
   @override
-  State<LoginView> createState() => _LoginViewState();
+  State<SignUpView> createState() => _SignUpViewState();
 }
 
-class _LoginViewState extends State<LoginView> {
+class _SignUpViewState extends State<SignUpView> {
   final appbar = UIConst.appbar();
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
@@ -51,11 +51,11 @@ class _LoginViewState extends State<LoginView> {
               const SizedBox(height: 40),
               RichText(
                 text: TextSpan(
-                  text: 'Dont have an account?',
+                  text: 'Have an account?',
                   style: TextStyle(fontSize: 16),
                   children: [
                     TextSpan(
-                        text: ' Sign Up',
+                        text: ' Login',
                         style:
                             TextStyle(color: Pallete.blueColor, fontSize: 16),
                         recognizer: TapGestureRecognizer()..onTap = () {})
